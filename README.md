@@ -1,8 +1,8 @@
-= TEXTRACTOR, JA!
+# TEXTRACTOR, JA!
 
 Textractor is a thing who do take EARLs and give you thems täxt.
 
-== License
+## License
 
 (The MIT License)
 
