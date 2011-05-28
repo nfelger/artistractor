@@ -3,7 +3,7 @@ require 'open-uri'
 
 class MusicmetricArtistList
   JSON_URL = 'http://apib2.semetric.com/artist/?token=bbc004e8891211e0ba8f00163e499d92'
-  attr_reader :artist_names
+  attr_reader :artists
 
   def initialize
     json_response = nil
@@ -11,6 +11,6 @@ class MusicmetricArtistList
       json_response = f.read
     end
     response = JSON.parse(json_response)
-    @artist_names = response['response']['artists'].map{|artist| artist['name']}
+    @artists = response['response']['artists']
   end
 end
