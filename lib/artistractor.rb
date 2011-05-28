@@ -2,8 +2,13 @@ require "rubygems"
 require "bundler"
 Bundler.setup
 
-require "sinatra"
+$LOAD_PATH << File.expand_path("../artistractor", __FILE__)
 
-get '/hi' do
-  "Hello World!"
+require 'sinatra/base'
+require "textractor"
+
+class Artistractor < Sinatra::Base
+  get '/textract' do
+    Textractor.textract params[:url]
+  end
 end
