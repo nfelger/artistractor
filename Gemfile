@@ -1,6 +1,11 @@
 source 'http://rubygems.org'
 
-gem 'cucumber'
+gem 'rake'
+
+gem 'sinatra'
+gem 'glassfish'
 gem 'jruby-openssl'
+
+gem 'cucumber'
 gem 'fakeweb'
 gem 'rack-test'

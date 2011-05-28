@@ -13,13 +13,20 @@ GEM
     fakeweb (1.3.0)
     gherkin (2.3.9-java)
       json (>= 1.4.6)
+    glassfish (1.0.3-java)
+      rack (>= 0.4.0)
     jruby-openssl (0.7.4)
       bouncy-castle-java
     json (1.5.1-java)
     rack (1.3.0)
     rack-test (0.6.0)
       rack (>= 1.0)
+    rake (0.9.0)
+    sinatra (1.2.6)
+      rack (~> 1.1)
+      tilt (>= 1.2.2, < 2.0)
     term-ansicolor (1.0.5)
+    tilt (1.3.2)
 
 PLATFORMS
   java
@@ -27,5 +34,8 @@ PLATFORMS
 DEPENDENCIES
   cucumber
   fakeweb
+  glassfish
   jruby-openssl
   rack-test
+  rake
+  sinatra
