@@ -2,9 +2,9 @@ source 'http://rubygems.org'
 
 gem 'rake'
 
-gem 'sinatra'
 gem 'glassfish'
 gem 'jruby-openssl'
+gem 'sinatra'
 
 gem 'cucumber'
 gem 'fakeweb'
