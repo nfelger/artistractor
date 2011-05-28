@@ -2,3 +2,5 @@
 .bundle
 vendor/jruby
 .DS_Store
+log
+tmp
