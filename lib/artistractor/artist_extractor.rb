@@ -11,16 +11,17 @@ class ArtistExtractor
     end
     
     def extract_from_text(text)
-      extracted_artists = []
-
       java_string = Java::JavaLang::String.new(text)
-
       chunking = @chunker.chunk(text)
+
+      artist_names = []
       chunking.each do |chunk|
-        artist_name = java_string.substring(chunk.start,chunk.end)
-        extracted_artists << {:name => artist_name, :mbid => @mbids[artist_name.downcase]}
+        artist_names << java_string.substring(chunk.start,chunk.end)
       end
-      extracted_artists
+
+      artist_names.sort.uniq.map do |artist_name|
+        {:name => artist_name, :mbid => @mbids[artist_name.downcase]}
+      end
     end
   end
 end
